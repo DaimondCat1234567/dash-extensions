@@ -13,16 +13,16 @@ export default [
         banner: "timaaos/YaGames.svg",
         creator: "timaaos",
         isGitHub: true,
-        notes: "Modified by cratch_craft_2, Den4ik-12 and DBDev",
+        notes: "Modified by scratch_craft_2, Den4ik-12 and damir2809",
     },
     {
         name: "Telegram Bot API",
         id: "TelegramBotAPI",
         description: "Interact with Telegram API for Bots.",
         code: "damir2809/TelegramBotAPI.js",
-        banner: "damir2809/TelegramBotAPI.svg",
+        banner: "damir2809/TelegramBotAPI.png",
         creator: "damir2809",
-        notes: "Translate to English soon. Creators: @DBDev_IT in Scratch @damir2809, @Fedor_sushko in Scratch @scratch_craft_2, @Grisshink in Scratch @ttt999, @MEOW_MUR920 in Scratch @By-ROlil-CO, @FXCHK404, @AnonimKingNews in Scratch @AnonimKing24",
+        notes: "Translate to English soon. Creators: damir2809, scratch_craft_2, ttt999, By-ROlil-CO, FXCHK404 (tg), AnonimKing24",
     },
     {
         name: "Pathfinding",
@@ -53,7 +53,7 @@ export default [
         id: "notification",
         description: "Send notifications with icons.",
         code: "shilenin/Notification.js",
-        banner: "shilenin/Notification.svg", // !!!
+        banner: "shilenin/Notification.svg",
         creator: "shilenin",
     },
     {
