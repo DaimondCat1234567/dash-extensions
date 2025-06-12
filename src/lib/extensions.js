@@ -57,6 +57,7 @@ export default [
     },
     {
         name: "Pen+",
+        id: "penP",
         description: "Extended pen section! Adds blocks for drawing triangles using textures and tints, drawing images and editing their pixels, etc.",
         code: "ObviousAlexC/PenPlus.js",
         banner: "ObviousAlexC/PenPlus.svg",
@@ -71,6 +72,7 @@ export default [
     },
     {
         name: "3D Math",
+        id: "obviousAlexCMath3d",
         description: "A handful of utilities for making your own sprite-based 3D engine.",
         code: "ObviousAlexC/3DMath.js",
         banner: "ObviousAlexC/3DMath.svg",
@@ -78,6 +80,7 @@ export default [
     },
     {
         name: "GPU.sb3",
+        id: "gpusb3",
         description: "Use WebGPU compute shaders to accelerate your projects.",
         code: "derpygamer2142/gpusb3.js",
         banner: "derpygamer2142/gpusb3.svg",
@@ -89,6 +92,7 @@ export default [
     },
     {
         name: "Object",
+        id: "skyhigh173object",
         description: "Handle large JSON files at an extreme speed.",
         code: "skyhigh173/object.js",
         banner: "skyhigh173/object.svg",
@@ -97,6 +101,7 @@ export default [
     },
     {
         name: "Scope Variable",
+        id: "0zCsv",
         description: "Manage your variables in a block-like structure.",
         code: "0znzw/ScopeVars.js",
         banner: "0znzw/ScopeVars.png",
@@ -107,6 +112,7 @@ export default [
     },
     {
         name: "Extra Timers",
+        id: "steve0greatnesstimers",
         description: "Allows for the creation and management of additional timer blocks.",
         code: "steve0greatness/timers.js",
         banner: "steve0greatness/timers.svg",
@@ -115,6 +121,7 @@ export default [
     },
     {
         name: "Dictation",
+        id: "pooiod7Dictation",
         description: "Convert your voice into text. (not supported in all browsers)",
         code: "pooiod/Dictation.js",
         banner: "pooiod/Dictation.svg",
@@ -122,6 +129,7 @@ export default [
     },
     {
         name: "Text To Speech: Redone",
+        id: "textToSpeechRedone",
         description: "A better alternitive to the base text to speech extension. Powered by the TTStool API",
         code: "PuzzlingGGG/ttsr.js",
         banner: "PuzzlingGGG/TTSR.png",
@@ -130,6 +138,7 @@ export default [
     },
     {
         name: "CloudLink",
+        id: "cloudlink",
         description: "A powerful WebSocket extension for Scratch. Allows for online connectivity to servers for things like multiplayer.",
         code: "MikeDev101/cloudlink.js",
         banner: "MikeDev101/cloudlink.svg",
@@ -138,6 +147,7 @@ export default [
     },
     {
         name: "E2EE",
+        id: "e2ee",
         description: "A general-purpose E2EE (End-to-End Encryption) extension for Scratch.",
         code: "MikeDev101/e2ee.js",
         banner: "MikeDev101/e2ee.svg",
@@ -146,6 +156,7 @@ export default [
     },
     {
         name: "WebRTC",
+        id: "webrtc",
         description: "A barebones WebRTC implementation.",
         code: "MikeDev101/webrtc.js",
         banner: "MikeDev101/webrtc.svg",
@@ -154,6 +165,7 @@ export default [
     },
     {
         name: "Spritesheeter",
+        id: "spritesheeter",
         description: "Load and manipulate spritesheets with customizable frames and XML support",
         code: "MubiLop/spritesheeter.js",
         banner: "MubiLop/spritesheeter.png",
@@ -163,6 +175,7 @@ export default [
     },
     {
         name: "Background Remover",
+        id: "dumzdevBGRemover",
         description: "Removes background from images.",
         code: "dumzdev/removebg.js",
         banner: "dumzdev/removebgbanner.svg",
@@ -170,6 +183,7 @@ export default [
     },
     {
         name: "PenguinAI",
+        id: "penguinGPT",
         description: "Talk to AI! Use Models like DALL-E-3, GPT, LLama, Claude, and more!",
         code: "MubiLop/penguingpt.js",
         banner: "MubiLop/penguingpt.png",
@@ -181,6 +195,7 @@ export default [
     },
     {
         name: "Block AI",
+        id: "pangpalgemini",
         description: "An AI powered chat bot to help you code in your projects.",
         code: "TheShovel/blockAI.js",
         banner: "TheShovel/thumbnail-blockAI.png",
@@ -192,6 +207,7 @@ export default [
     },
     {
         name: "PenguinHook",
+        id: "mubiloppenguinhook",
         description: "Send Webhook requests, that can be Discord or any type of webhook.",
         code: "MubiLop/penguinhook.js",
         banner: "MubiLop/penguinhook.png",
@@ -201,6 +217,7 @@ export default [
     },
     {
         name: "Number Utilities",
+        id: "numberUtilities",
         description: "Adds blocks for number formatting and manipulation.",
         code: "MubiLop/numutils.js",
         banner: "MubiLop/numutils.png",
@@ -212,6 +229,7 @@ export default [
     },
     {
         name: "Mathematics",
+        id: "jwklongmathematics",
         description: "Complicated maths extension for nerds.",
         code: "jwklong/mathematics.js",
         banner: "jwklong/mathematics.png",
@@ -220,6 +238,7 @@ export default [
     },
     {
         name: "Big Decimal",
+        id: "qxsckbignumber",
         description: "High precision operations. (Support decimals)",
         code: "qxsck/big-decimal.js",
         banner: "qxsck/big-decimal.svg",
@@ -228,6 +247,7 @@ export default [
     },
     {
         name: "Format Numbers",
+        id: "formatNumbers",
         description: "Format large numbers into AD standard, fixed decimal, comma separated, or scientific notation.",
         code: "DogeisCut/FormatNumbers.js",
         banner: "DogeisCut/FormatNumbers.png",
@@ -237,6 +257,7 @@ export default [
     },
     {
         name: "Random Utilities",
+        id: "randomutils",
         description: "Many blocks related to generating random values, including seed-based number generation, true number generation, UUID's, random strings, etc.",
         code: "Gen1x/random_utils.js",
         banner: "Gen1x/randomutils.png",
@@ -244,6 +265,7 @@ export default [
     },
     {
         name: "Toast Notifications",
+        id: "toastnotifs",
         description: "Did you want alerts? Notifications that are easily customizable? This is the only and best notification extension!",
         code: "MubiLop/toastnotifs.js",
         banner: "MubiLop/toastnotifs.png",
@@ -254,6 +276,7 @@ export default [
     },
     {
         name: "Project Interfaces",
+        id: "lordcatprojectinterfaces",
         description: "Effortlessly create intuitive graphical user interfaces in your projects.",
         code: "LordCat0/ProjectInterfaces.js",
         banner: "LordCat0/ProjectInterfaces.png",
@@ -264,6 +287,7 @@ export default [
     },
     {
         name: "Git Penguin",
+        id: "gitpenguin",
         description: "Make requests and control the files for your GitHub repository.",
         code: "justablock/gitpenguin.js",
         banner: "justablock/gitpenguin.png",
@@ -272,6 +296,7 @@ export default [
     },
     {
         name: "Pang API",
+        id: "sammerpenguinapi",
         description: "Fetch information from the PenguinMod API.",
         code: "SammerLOL/pangapi.js",
         banner: "SammerLOL/pangapi.png",
@@ -280,6 +305,7 @@ export default [
     },
     {
         name: "TurboWeather",
+        id: "turboweather",
         description: "Show weather and location data for any place in our world. Data that could be used for doxxing is deleted from results.",
         code: "RubyDevs/turboweather.js",
         banner: "RubyDevs/turboweather.webp",
@@ -288,6 +314,7 @@ export default [
     },
     {
         name: "Cockatiel Location",
+        id: "BPixelCockatiel",
         description: "Fetch Users' IP Addresses and Location.",
         code: "bruhbeast-pixel/CockatielLocation.js",
         banner: "bruhbeast-pixel/CockatielLocation.svg",
@@ -296,6 +323,7 @@ export default [
     },
     {
         name: "CORS Proxy",
+        id: "nkcorsproxy",
         description: "Accessible CORS Proxies for fetching information with PenguinMod.",
         code: "NamelessCat/corsproxy.js",
         banner: "NamelessCat/corsproxy.png",
@@ -303,6 +331,7 @@ export default [
     },
     {
         name: "Extension Exposer",
+        id: "jodieextexp",
         description: "Access the raw functions from other extensions.",
         code: "TheShovel/extexp.js",
         banner: "TheShovel/placeholder-extexp.png",
@@ -312,6 +341,7 @@ export default [
     },
     {
         name: "Project Page",
+        id: "jwklongprojectpage",
         description: "Modify and affect the studio project page from the code. How annoying can an extension possibly be?",
         code: "jwklong/projectpage.js",
         banner: "jwklong/projectpage.png",
@@ -320,6 +350,7 @@ export default [
     },
     {
         name: "All Menus",
+        id: "lmsAllMenus",
         description: "Every dropdown menu for each block, in one extension.",
         code: "Lily/AllMenus.js",
         banner: "Lily/AllMenus.svg",
@@ -328,6 +359,7 @@ export default [
     },
     {
         name: "More Fields",
+        id: "0znzwMoreFields",
         description: "Custom Field Types",
         code: "Ashime/MoreFields.js",
         banner: "0znzw/MoreFields.png",
@@ -336,6 +368,7 @@ export default [
     },
     {
         name: "Beepbox Player",
+        id: "dogeiscutbeepboxplayer",
         description: "Play, edit, and read songs from any BeepBox mod directly from the URL or JSON!",
         code: "DogeisCut/BeepBoxPlayer.js",
         banner: "DogeisCut/BeepBoxPlayer.svg",
@@ -344,6 +377,7 @@ export default [
     },
     {
         name: "Update File (Direct Access)",
+        id: "ACatUpdateFile",
         description: "A simple extension that uses the File System Access API to update files dynamically.",
         code: "Anonymous_cat1/updateFile.js",
         banner: "Anonymous_cat1/updateFile.svg",
@@ -354,6 +388,7 @@ export default [
     },
     {
         name: "File Upload",
+        id: "cfupload",
         description: "Upload files to the Network, can also used with Files extension.",
         code: "Codefoxy/cfupload.js",
         banner: "Codefoxy/cfupload.svg",
@@ -362,6 +397,7 @@ export default [
     },
     {
         name: "Video Sharing",
+        id: "p7videosharing",
         description: "Share your screen or camera to your projects!",
         code: "pooiod/VideoSharing.js",
         banner: "pooiod/VideoSharing.svg",
@@ -370,6 +406,7 @@ export default [
     },
     {
         name: "WindowHasher",
+        id: "p7windowhash",
         description: "Interact with URL hash: the part of the URL after a hashtag",
         code: "pooiod/WindowHasher.js",
         banner: "pooiod/WindowHasher.png",
@@ -377,6 +414,7 @@ export default [
     },
     {
         name: "Scratchblocks",
+        id: "scratchblocks",
         description: "Generate blocks in the Scratch3, or Scratch2 format.",
         code: "pooiod/Scratchblocks.js",
         banner: "pooiod/Scratchblocks.svg",
@@ -384,6 +422,7 @@ export default [
     },
     {
         name: "Google Auth",
+        id: "googleAuth",
         description: "Login with Google to your projects. Allows getting a name, profile picture and email from the google account.",
         code: "Ikelene/googleAuthExtension.js",
         banner: "Ikelene/ExtensionBanner.png",
@@ -393,6 +432,7 @@ export default [
     },
     {
         name: "Discord Auth",
+        id: "discordauth",
         description: "Login with discord to your projects. Identify users by ID and username in a secure and easy way!",
         code: "NotHouse/DiscordAuth.js",
         banner: "NotHouse/DiscordAuth-banner.png",
@@ -401,6 +441,7 @@ export default [
     },
     {
         name: "Twitch",
+        id: "bopTwitch",
         description: "Communicate with your Twitch Chat on PenguinMod!\n\nPenguinMod is not affiliated with Twitch.",
         code: "bop_tw/Twitch.js",
         banner: "bop_tw/Twitch.png",
@@ -409,6 +450,7 @@ export default [
     },
     {
         name: "Chess",
+        id: "chessG1nX",
         description: "A powerful extension about Chess. It allows to create a Chessboard, manage chess games, and use Stockfish 17 in your projects.",
         code: "Gen1x/chess-ext.js",
         banner: "Gen1x/chess-ext.png",
@@ -417,6 +459,7 @@ export default [
     },
     {
         name: "CATS",
+        id: "ginxilovecats",
         description: "Blocks related to cats.",
         code: "Gen1x/CATS.js",
         banner: "Gen1x/cats.png",
@@ -424,6 +467,7 @@ export default [
     },
     {
         name: "Free Servers",
+        id: "FreeServers",
         description: "Here you can find a free server for your projects. And also check whether it is working now or not.\n\nЗдесь вы можете найти бесплатный сервер для своих проектов. А также проверить, работает он сейчас или нет.",
         code: "WAYLIVES/FreeServers.js",
         banner: "WAYLIVES/FreeServersIMG.svg",
@@ -433,6 +477,7 @@ export default [
     },
     {
         name: "More Types",
+        id: "vgscompiledvalues",
         description: "Adds more value types to PenguinMod, implementing Functions, Objects, Arrays, Sets, Maps, Symbols and Nothing.",
         code: "VeryGoodScratcher42/More-Types.js",
         banner: "VeryGoodScratcher42/More-Types.png",
@@ -441,6 +486,7 @@ export default [
     },
     {
         name: "oneko",
+        id: "onkeoPetExtension",
         description: "Cute cat that follows you on the block area.",
         code: "TheShovel/oneko.js",
         banner: "TheShovel/thumbnail-oneko.png",
@@ -449,6 +495,7 @@ export default [
     },
     {
         name: "Counter++",
+        id: "redstoniacounterplusplus",
         description: "Count anything, at any time, in PenguinMod!",
         code: "MrRedstonia/counterplusplus.js",
         banner: "MrRedstonia/counterplusplus.png",
@@ -457,6 +504,7 @@ export default [
     },
     {
         name: "How many lines?",
+        id: "monochromasityhml",
         description: "Blocks to determine the amount of new lines in a piece of text.",
         code: "Monochromasity/howmanylines.js",
         banner: "Monochromasity/placeholder-howmanylines.png",
@@ -465,6 +513,7 @@ export default [
     },
     {
         name: "Paint Utils",
+        id: "fruitsPaintUtils",
         description: "A colour extension that lets you mix colours.",
         code: "Fruits555000/PaintUtils.js",
         banner: "Fruits555000/PaintUtils.svg",
@@ -473,6 +522,7 @@ export default [
     },
     {
         name: "Resolution",
+        id: "dogeiscutResolution",
         description: "Provides utility blocks that simplify the creation of projects with dynamic resolution support.",
         code: "DogeisCut/Resolution.js",
         banner: "DogeisCut/Resolution.svg",
