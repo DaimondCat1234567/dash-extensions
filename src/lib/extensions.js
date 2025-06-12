@@ -11,9 +11,8 @@ export default [
         description: "Yandex Games Software Develompent Kit (SDK) for Scratch.",
         code: "timaaos/YaGames.js",
         banner: "timaaos/YaGames.svg",
-        creator: "timaaos",
+        creator: ['timaaos', 'scratch-craft-2', 'DDen4ik-12', 'DBDev-git'],
         isGitHub: true,
-        notes: "Modified by scratch_craft_2, Den4ik-12 and damir2809",
     },
     {
         name: "Telegram Bot API",
@@ -21,8 +20,8 @@ export default [
         description: "Interact with Telegram API for Bots.",
         code: "damir2809/TelegramBotAPI.js",
         banner: "damir2809/TelegramBotAPI.png",
-        creator: "damir2809",
-        notes: "Translate to English soon. Creators: damir2809, scratch_craft_2, ttt999, By-ROlil-CO, FXCHK404 (tg), AnonimKing24",
+        creator: ["damir2809", "scratch_craft_2", "ttt999", "By-ROlil-CO", "AnonimKing24"],
+        notes: "Translate to English soon.",
     },
     {
         name: "Pathfinding",
