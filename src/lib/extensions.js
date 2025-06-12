@@ -6,6 +6,57 @@
 */
 export default [
     {
+        name: "YaGames SDK",
+        id: "yagames",
+        description: "Yandex Games Software Develompent Kit (SDK) for Scratch.",
+        code: "timaaos/YaGames.js",
+        banner: "timaaos/YaGames.svg",
+        creator: "timaaos",
+        isGitHub: true,
+        notes: "Modified by cratch_craft_2, Den4ik-12 and DBDev",
+    },
+    {
+        name: "Telegram Bot API",
+        id: "TelegramBotAPI",
+        description: "Interact with Telegram API for Bots.",
+        code: "damir2809/TelegramBotAPI.js",
+        banner: "damir2809/TelegramBotAPI.svg",
+        creator: "damir2809",
+        notes: "Translate to English soon. Creators: @DBDev_IT in Scratch @damir2809, @Fedor_sushko in Scratch @scratch_craft_2, @Grisshink in Scratch @ttt999, @MEOW_MUR920 in Scratch @By-ROlil-CO, @FXCHK404, @AnonimKingNews in Scratch @AnonimKing24",
+    },
+    {
+        name: "Pathfinding",
+        id: "Den4ik12Pathfinding",
+        description: "Find paths from one position to another, avoiding obstacles.",
+        code: "Den4ik-12/Pathfinding.js",
+        banner: "Den4ik-12/Pathfinding.svg",
+        creator: "Den4ik-12",
+    },
+    {
+        name: "Wheel Scroll",
+        id: "Den4ik12WheelScroll",
+        description: "Blocks for detecting mouse wheel scrolling.",
+        code: "Den4ik-12/WheelScroll 1.2.js",
+        banner: "Den4ik-12/WheelScroll.svg",
+        creator: "Den4ik-12",
+    },
+    {
+        name: "Modals",
+        id: "htmlalert",
+        description: "Control classic modal windows in browsers!",
+        code: "scratch_craft_2/Modals.js",
+        banner: "scratch_craft_2/Modals.png",
+        creator: "scratch_craft_2",
+    },
+    {
+        name: "Notification",
+        id: "notification",
+        description: "Send notifications with icons.",
+        code: "shilenin/Notification.js",
+        banner: "shilenin/Notification.svg", // !!!
+        creator: "shilenin",
+    },
+    {
         name: "Pen+",
         description: "Extended pen section! Adds blocks for drawing triangles using textures and tints, drawing images and editing their pixels, etc.",
         code: "ObviousAlexC/PenPlus.js",
