@@ -58,7 +58,7 @@ export default [
 ];
 
 // This is PenguinMod's extensions. Added here for IDs addition
-const pm = [
+export const pm = [
     {
         name: "Pen+",
         id: "penP",
