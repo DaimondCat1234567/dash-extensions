@@ -1,8 +1,8 @@
 /*
-    note to contributors & developers that can read JSON:
+    Note to contributors & developers that can read JSON:
         the extra commas are added at the end of each thing
         to help copy & pasting work better
-        pleas dont remove them :)
+        please dont remove them :)
 */
 export default [
     {
@@ -55,6 +55,10 @@ export default [
         banner: "shilenin/Notification.svg",
         creator: "shilenin",
     },
+];
+
+// This is PenguinMod's extensions. Added here for IDs addition
+const pm = [
     {
         name: "Pen+",
         id: "penP",
@@ -529,7 +533,7 @@ export default [
         creator: "DogeisCut",
         isGitHub: true, 
         documentation: "Resolution",
-    }
+    },
     /* these extensions are completely dead as of now
     {
         name: "Online Captcha",
@@ -554,4 +558,4 @@ export default [
         creator: "G1nX",
     },
     */
-];
+]
