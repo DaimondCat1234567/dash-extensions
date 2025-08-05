@@ -4,7 +4,7 @@
         to help copy & pasting work better
         please dont remove them :)
 */
-export default [
+const extensions = [
     {
         name: "YaGames SDK",
         id: "yagames",
@@ -58,7 +58,7 @@ export default [
 ];
 
 // This is PenguinMod's extensions. Added here for IDs addition
-export const pm = [
+const pmExtensions = [
     {
         name: "Pen+",
         id: "penP",
@@ -558,4 +558,6 @@ export const pm = [
         creator: "G1nX",
     },
     */
-]
+];
+
+export {extensions, pmExtensions}
