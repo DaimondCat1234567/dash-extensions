@@ -6,6 +6,15 @@
 */
 const extensions = [
     {
+        name: "PlaygamaBridge SDK",
+        id: "playgama",
+        description: "Playgama Bridge Software Develompent Kit (SDK) for Scratch.",
+        code: "https://github.com/Playgama/bridge-scratch/releases/download/v1.24.0-preview/PlaygamaBridge.js",
+        banner: "Playgama/PlaygamaBridge.svg",
+        creator: ['Playgama', 'sergei-playgama', 'DBDev-git'],
+        isGitHub: true,
+    },
+    {
         name: "YaGames SDK",
         id: "yagames",
         description: "Yandex Games Software Develompent Kit (SDK) for Scratch.",
