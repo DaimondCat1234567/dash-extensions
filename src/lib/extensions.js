@@ -141,6 +141,16 @@ const pmExtensions = [
         creator: "pooiod7",
     },
     {
+        name: "Doodle Recognition",
+        id: "imagevisionquickdraw",
+        description: "A implementation of Google's Quick Draw image vision model",
+        code: "TheShovel/doodlerec.js",
+        banner: "TheShovel/thumbnail_doodlerec.png",
+        banner: "TheShovel/thumbnail-doodlerec.png",
+        creator: "TheShovel",
+        isGitHub: true,
+    },
+    {
         name: "Text To Speech: Redone",
         id: "textToSpeechRedone",
         description: "A better alternitive to the base text to speech extension. Powered by the TTStool API",
