@@ -14,7 +14,7 @@ import Separator from '../tw-extension-separator/separator.jsx';
 import RemovedTrademarks from '../tw-removed-trademarks/removed-trademarks.jsx';
 import {APP_NAME} from '../../lib/brand.js';
 
-import styles from './library.css';
+import './library.css';
 
 const messages = defineMessages({
     filterPlaceholder: {
@@ -255,31 +255,31 @@ class LibraryComponent extends React.Component {
                 onRequestClose={this.handleClose}
             >
                 {(this.props.filterable || this.props.tags) && (
-                    <div className={styles.filterBar}>
+                    <div className="filter-bar">
                         {this.props.filterable && (
                             <Filter
                                 className={classNames(
-                                    styles.filterBarItem,
-                                    styles.filter
+                                    'filter-bar-item',
+                                    'filter'
                                 )}
                                 filterQuery={this.state.filterQuery}
-                                inputClassName={styles.filterInput}
+                                inputClassName="filter-input"
                                 placeholderText={this.props.intl.formatMessage(messages.filterPlaceholder)}
                                 onChange={this.handleFilterChange}
                                 onClear={this.handleFilterClear}
                             />
                         )}
                         {this.props.filterable && this.props.tags && (
-                            <Divider className={classNames(styles.filterBarItem, styles.divider)} />
+                            <Divider className={classNames('filter-bar-item', 'divider')} />
                         )}
                         {this.props.tags &&
-                            <div className={styles.tagWrapper}>
+                            <div className="tag-wrapper">
                                 {tagListPrefix.concat(this.props.tags).map((tagProps, id) => (
                                     <TagButton
                                         active={this.state.selectedTag === tagProps.tag.toLowerCase()}
                                         className={classNames(
-                                            styles.filterBarItem,
-                                            styles.tagButton,
+                                            'filter-bar-item',
+                                            'tag-button',
                                             tagProps.className
                                         )}
                                         key={`tag-button-${id}`}

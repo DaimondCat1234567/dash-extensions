@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './spinner.css';
+import './spinner.css';
 
 const SpinnerComponent = function (props) {
     const {
@@ -15,11 +15,11 @@ const SpinnerComponent = function (props) {
         <div
             className={classNames(
                 className,
-                styles.spinner,
-                styles[level],
+                'spinner',
+                level,
                 {
-                    [styles.small]: small,
-                    [styles.large]: large
+                    'small': small,
+                    'large': large
                 }
             )}
         />

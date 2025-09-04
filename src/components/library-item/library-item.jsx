@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Box from '../box/box.jsx';
-import styles from './library-item.css';
+import './library-item.css';
 import classNames from 'classnames';
 
 import bluetoothIconURL from './bluetooth.svg';
@@ -32,12 +32,12 @@ class LibraryItemComponent extends React.PureComponent {
         );
         const favorite = (
             <button
-                className={classNames(styles.favoriteContainer, {[styles.active]: this.props.favorite})}
+                className={classNames('favorite-container', {'active': this.props.favorite})}
                 onClick={this.props.onFavorite}
             >
                 <img
                     src={this.props.favorite ? favoriteActiveIcon : favoriteInactiveIcon}
-                    className={styles.favoriteIcon}
+                    className="favorite-icon"
                     draggable={false}
                     alt={favoriteMessage}
                     title={favoriteMessage}
@@ -48,19 +48,19 @@ class LibraryItemComponent extends React.PureComponent {
         return this.props.featured ? (
             <div
                 className={classNames(
-                    styles.libraryItem,
-                    styles.featuredItem,
+                    'library-item',
+                    'featured-item',
                     {
-                        [styles.disabled]: this.props.disabled
+                        'disabled': this.props.disabled
                     },
-                    typeof this.props.extensionId === 'string' ? styles.libraryItemExtension : null,
-                    this.props.hidden ? styles.hidden : null
+                    typeof this.props.extensionId === 'string' ? 'library-item-extension' : null,
+                    this.props.hidden ? 'hidden' : null
                 )}
                 onClick={this.props.onClick}
             >
-                <div className={styles.featuredImageContainer}>
+                <div className="featured-image-container">
                     {this.props.disabled ? (
-                        <div className={styles.comingSoonText}>
+                        <div className="coming-soon-text">
                             <FormattedMessage
                                 defaultMessage="Coming Soon"
                                 description="Label for extensions that are not yet implemented"
@@ -69,16 +69,16 @@ class LibraryItemComponent extends React.PureComponent {
                         </div>
                     ) : null}
                     <img
-                        className={styles.featuredImage}
+                        className="featured-image"
                         loading="lazy"
                         draggable={false}
                         src={this.props.iconURL}
                     />
                 </div>
                 {this.props.insetIconURL ? (
-                    <div className={styles.libraryItemInsetImageContainer}>
+                    <div className="library-item-inset-image-container">
                         <img
-                            className={styles.libraryItemInsetImage}
+                            className="library-item-inset-image"
                             src={this.props.insetIconURL}
                             draggable={false}
                         />
@@ -86,12 +86,12 @@ class LibraryItemComponent extends React.PureComponent {
                 ) : null}
                 <div
                     className={typeof this.props.extensionId === 'string' ?
-                        classNames(styles.featuredExtensionText, styles.featuredText) : styles.featuredText
+                        classNames('featured-extension-text', 'featured-text') : 'featured-text'
                     }
                 >
-                    <span className={styles.libraryItemName}>{this.props.name}</span>
+                    <span className="library-item-name">{this.props.name}</span>
                     <br />
-                    <span className={styles.featuredDescription}>{this.props.description}</span>
+                    <span className="featured-description">{this.props.description}</span>
                 </div>
 
                 {(
@@ -102,9 +102,9 @@ class LibraryItemComponent extends React.PureComponent {
                   this.props.docsURI ||
                   this.props.samples
                 ) ? (
-                    <div className={styles.featuredExtensionMetadata}>
+                    <div className="featured-extension-metadata">
                         {this.props.bluetoothRequired || this.props.internetConnectionRequired ? (
-                            <div className={styles.featuredExtensionMetadataSection}>
+                            <div className="featured-extension-metadata-section">
                                 <div>
                                     <div>
                                         <FormattedMessage
@@ -114,7 +114,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className="featured-extension-metadata-detail"
                                     >
                                         {this.props.bluetoothRequired ? (
                                             <img
@@ -133,7 +133,7 @@ class LibraryItemComponent extends React.PureComponent {
                             </div>
                         ) : null}
                         {this.props.collaborator ? (
-                            <div className={styles.featuredExtensionMetadataSection}>
+                            <div className="featured-extension-metadata-section">
                                 <div>
                                     <div>
                                         <FormattedMessage
@@ -143,7 +143,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className="featured-extension-metadata-detail"
                                     >
                                         {this.props.collaborator}
                                     </div>
@@ -151,7 +151,7 @@ class LibraryItemComponent extends React.PureComponent {
                             </div>
                         ) : null}
                         {this.props.credits && this.props.credits.length > 0 ? (
-                            <div className={styles.featuredExtensionMetadataSection}>
+                            <div className="featured-extension-metadata-section">
                                 <div>
                                     <div>
                                         <FormattedMessage
@@ -161,7 +161,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className="featured-extension-metadata-detail"
                                     >
                                         {this.props.credits.map((credit, index) => (
                                             <React.Fragment key={index}>
@@ -176,11 +176,11 @@ class LibraryItemComponent extends React.PureComponent {
                             </div>
                         ) : null}
                         {this.props.docsURI || this.props.samples ? (
-                            <div className={styles.featuredExtensionMetadataSection}>
+                            <div className="featured-extension-metadata-section">
                                 <div>
                                     <div>Resources</div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className="featured-extension-metadata-detail"
                                     >
                                         {this.props.docsURI && (
                                             <a
@@ -234,8 +234,8 @@ class LibraryItemComponent extends React.PureComponent {
         ) : (
             <Box
                 className={classNames(
-                    styles.libraryItem, {
-                        [styles.hidden]: this.props.hidden
+                    'library-item', {
+                        'hidden': this.props.hidden
                     }
                 )}
                 role="button"
@@ -248,21 +248,21 @@ class LibraryItemComponent extends React.PureComponent {
                 onMouseLeave={this.props.showPlayButton ? null : this.props.onMouseLeave}
             >
                 {/* Layers of wrapping is to prevent layout thrashing on animation */}
-                <Box className={styles.libraryItemImageContainerWrapper}>
+                <Box className="library-item-image-container-wrapper">
                     <Box
-                        className={styles.libraryItemImageContainer}
+                        className="library-item-image-container"
                         onMouseEnter={this.props.showPlayButton ? this.props.onMouseEnter : null}
                         onMouseLeave={this.props.showPlayButton ? this.props.onMouseLeave : null}
                     >
                         <img
-                            className={styles.libraryItemImage}
+                            className="library-item-image"
                             loading="lazy"
                             src={this.props.iconURL}
                             draggable={false}
                         />
                     </Box>
                 </Box>
-                <span className={styles.libraryItemName}>{this.props.name}</span>
+                <span className="library-item-name">{this.props.name}</span>
 
                 {favorite}
             </Box>

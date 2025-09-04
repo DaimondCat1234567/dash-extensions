@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import stylePropType from 'react-style-proptype';
-import styles from './box.css';
+import './box.css';
 
 const getRandomColor = (function () {
     // In "DEBUG" mode this is used to output a random background color for each
@@ -49,7 +49,7 @@ const Box = props => {
         ...componentProps
     } = props;
     return React.createElement(element, {
-        className: classNames(className, styles.box),
+        className: classNames(className, 'box'),
         ref: componentRef,
         style: Object.assign(
             {

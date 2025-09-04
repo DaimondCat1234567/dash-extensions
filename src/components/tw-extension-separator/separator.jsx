@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './separator.css';
+import './separator.css';
 
 const Separator = () => (
-    <hr className={styles.separator} />
+    <hr className='separator' />
 );
 
 export default Separator;

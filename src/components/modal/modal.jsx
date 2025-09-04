@@ -5,16 +5,16 @@ import ReactModal from 'react-modal';
 
 import Box from '../box/box.jsx';
 
-import styles from './modal.css';
+import './modal.css';
 
 const ModalComponent = props => (
     <ReactModal
         isOpen
-        className={classNames(styles.modalContent, props.className, {
-            [styles.fullScreen]: props.fullScreen
+        className={classNames('modal-content', props.className, {
+            'full-screen': props.fullScreen
         })}
         contentLabel={props.contentLabel}
-        overlayClassName={styles.modalOverlay}
+        overlayClassName="modal-overlay"
         onRequestClose={props.onRequestClose}
     >
         <Box
@@ -22,16 +22,16 @@ const ModalComponent = props => (
             direction="column"
             grow={1}
         >
-            <div className={classNames(styles.header, props.headerClassName)}>
+            <div className={classNames('header', props.headerClassName)}>
                 <div
                     className={classNames(
-                        styles.headerItem,
-                        styles.headerItemTitle
+                        'header-item',
+                        'header-item-title'
                     )}
                 >
                     {props.headerImage ? (
                         <img
-                            className={styles.headerImage}
+                            className="header-image"
                             src={props.headerImage}
                             draggable={false}
                         />

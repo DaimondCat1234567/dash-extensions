@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './button.css';
+import './button.css';
 
 const ButtonComponent = ({
     className,
@@ -22,7 +22,7 @@ const ButtonComponent = ({
 
     const icon = iconSrc && (
         <img
-            className={classNames(iconClassName, styles.icon)}
+            className={classNames(iconClassName, 'icon')}
             draggable={false}
             src={iconSrc}
             height={iconHeight}
@@ -33,7 +33,7 @@ const ButtonComponent = ({
     return (
         <span
             className={classNames(
-                styles.outlinedButton,
+                'outlined-button',
                 className
             )}
             role="button"
@@ -41,7 +41,7 @@ const ButtonComponent = ({
             {...props}
         >
             {icon}
-            <div className={styles.content}>{children}</div>
+            <div className="content">{children}</div>
         </span>
     );
 };

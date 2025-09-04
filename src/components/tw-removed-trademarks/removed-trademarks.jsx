@@ -1,9 +1,9 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
-import styles from './removed-trademarks.css';
+import './removed-trademarks.css';
 
 const RemovedTrademarks = () => (
-    <div className={styles.removedTrademarks}>
+    <div className='removed-trademarks'>
         <FormattedMessage
             // eslint-disable-next-line max-len
             defaultMessage="Some items that contained Scratch trademarks are no longer listed here."

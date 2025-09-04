@@ -4,7 +4,7 @@ import React from 'react';
 
 import filterIcon from './icon--filter.svg';
 import xIcon from './icon--x.svg';
-import styles from './filter.css';
+import './filter.css';
 
 const FilterComponent = props => {
     const {
@@ -17,27 +17,27 @@ const FilterComponent = props => {
     } = props;
     return (
         <div
-            className={classNames(className, styles.filter, {
-                [styles.isActive]: filterQuery.length > 0
+            className={classNames(className, 'filter', {
+                'is-active': filterQuery.length > 0
             })}
         >
             <img
-                className={styles.filterIcon}
+                className="filter-icon"
                 src={filterIcon}
             />
             <input
-                className={classNames(styles.filterInput, inputClassName)}
+                className={classNames('filter-input', inputClassName)}
                 placeholder={placeholderText}
                 type="text"
                 value={filterQuery}
                 onChange={onChange}
             />
             <div
-                className={styles.xIconWrapper}
+                className="x-icon-wrapper"
                 onClick={onClear}
             >
                 <img
-                    className={styles.xIcon}
+                    className="x-icon"
                     src={xIcon}
                 />
             </div>

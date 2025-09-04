@@ -5,7 +5,7 @@ import {FormattedMessage} from 'react-intl';
 
 import Button from '../button/button.jsx';
 
-import styles from './tag-button.css';
+import './tag-button.css';
 
 const TagButtonComponent = ({
     active,
@@ -17,13 +17,13 @@ const TagButtonComponent = ({
 }) => (
     <Button
         className={classNames(
-            styles.tagButton,
+            'tag-button',
             className, {
-                [styles.active]: active
+                'active': active
             }
         )}
         iconClassName={classNames(
-            styles.tagButtonIcon,
+            'tag-button-icon',
             iconClassName
         )}
         {...props}
