@@ -121,38 +121,10 @@ class ExtensionLibrary extends React.PureComponent {
 
         const extensionId = item.extensionId;
 
-        if (extensionId === 'custom_extension') {
-            this.props.onOpenCustomExtensionModal();
-            return;
-        }
-
-        if (extensionId === 'procedures_enable_return') {
-            this.props.onEnableProcedureReturns();
-            this.props.onCategorySelected('myBlocks');
-            return;
-        }
-
-        if (extensionId === 'data_lists_enable') {
-            this.props.onEnableLists();
-            this.props.onCategorySelected('data');
-            return;
-        }
-
         const url = item.extensionURL ? item.extensionURL : extensionId;
         if (!item.disabled) {
-            if (this.props.vm.extensionManager.isExtensionLoaded(extensionId)) {
-                this.props.onCategorySelected(extensionId);
-            } else {
-                this.props.vm.extensionManager.loadExtensionURL(url)
-                    .then(() => {
-                        this.props.onCategorySelected(extensionId);
-                    })
-                    .catch(err => {
-                        console.error(err);
-                        // eslint-disable-next-line no-alert
-                        alert(err);
-                    });
-            }
+            navigator.clipboard.writeText(url);
+            alert("Extension URL copied to clipboard!")
         }
     }
     render () {
