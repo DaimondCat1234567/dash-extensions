@@ -3,10 +3,10 @@
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {extensions, pmExtensions} from '../lib/extensions.js';
+import {extensions} from '../lib/extensions.js';
 import {defineMessages, injectIntl} from 'react-intl';
 
-import extensionLibraryContent, {
+import {
     galleryError,
     galleryLoading,
     galleryMore // soon
@@ -17,7 +17,7 @@ import LibraryComponent from '../components/library/library.jsx';
 
 const messages = defineMessages({
     extensionTitle: {
-        defaultMessage: 'Choose an Extension',
+        defaultMessage: 'Dash Extensions Gallery',
         description: 'Heading for the extension library',
         id: 'gui.extensionLibrary.chooseAnExtension'
     }
@@ -39,85 +39,7 @@ const translateGalleryItem = (extension, locale) => ({
     description: extension.descriptionTranslations[locale] || extension.description
 });
 
-let cachedTwGallery = null;
-let cachedPmGallery = null;
 let cachedGallery = null;
-
-const fetchTwLibrary = async () => {
-    const res = await fetch('https://extensions.turbowarp.org/generated-metadata/extensions-v0.json');
-    if (!res.ok) {
-        throw new Error(`HTTP status ${res.status}`);
-    }
-    const data = await res.json();
-    return data.extensions.map(extension => ({
-        name: extension.name,
-        nameTranslations: extension.nameTranslations || {},
-        description: extension.description,
-        descriptionTranslations: extension.descriptionTranslations || {},
-        extensionId: extension.id,
-        extensionURL: `https://extensions.turbowarp.org/${extension.slug}.js`,
-        iconURL: `https://extensions.turbowarp.org/${extension.image || 'images/unknown.svg'}`,
-        tags: ['tw'],
-        credits: [
-            ...(extension.original || []),
-            ...(extension.by || [])
-        ].map(credit => {
-            if (credit.link) {
-                return (
-                    <a
-                        href={credit.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        key={credit.name}
-                    >
-                        {credit.name}
-                    </a>
-                );
-            }
-            return credit.name;
-        }),
-        docsURI: extension.docs ? `https://extensions.turbowarp.org/${extension.slug}` : null,
-        samples: extension.samples ? extension.samples.map(sample => ({
-            href: `${window.location.href}editor?project_url=https://extensions.turbowarp.org/samples/${encodeURIComponent(sample)}.sb3`,
-            text: sample
-        })) : null,
-        incompatibleWithScratch: !extension.scratchCompatible,
-        featured: true
-    }));
-};
-
-const fetchPmLibrary = async () => {
-    return pmExtensions.map((extension, index) => ({
-        name: extension.name,
-        nameTranslations: extension.nameTranslations || {},
-        description: extension.description,
-        descriptionTranslations: extension.descriptionTranslations || {},
-        extensionId: extension.id,
-        extensionURL: `https://extensions.penguinmod.com/extensions/${extension.code}`,
-        iconURL: `https://extensions.penguinmod.com/images/${extension.banner || 'unknown.svg'}`,
-        tags: ['pm'],
-        credits: [
-            ...(typeof extension.creator == 'object' ? extension.creator : [extension.creator] || []),
-            ...(extension.notes ? [extension.notes] : [])
-        ].map(credit => {
-            if (extension.notes && credit == extension.notes) return credit;
-            return (
-                <a
-                    href={extension.isGitHub ? `https://github.com/${credit}` : `https://scratch.mit.edu/users/${credit}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    key={credit}
-                >
-                    {credit}
-                </a>
-            );
-        }),
-        docsURI: extension.documentation ? `https://extensions.penguinmod.com/docs/${extension.documentation}` : null,
-        samples: null,
-        incompatibleWithScratch: !extension.scratchCompatible || true,
-        featured: true
-    }));
-};
 
 const fetchLibrary = async () => {
     return extensions.map(extension => ({
@@ -162,8 +84,6 @@ class ExtensionLibrary extends React.PureComponent {
             'handleItemSelect'
         ]);
         this.state = {
-            pmGallery: cachedPmGallery,
-            twGallery: cachedTwGallery,
             gallery: cachedGallery,
             galleryError: null,
             galleryTimedOut: false
@@ -176,39 +96,6 @@ class ExtensionLibrary extends React.PureComponent {
                     galleryTimedOut: true
                 });
             }, 750);
-
-            fetchTwLibrary()
-                .then(gallery => {
-                    cachedTwGallery = gallery;
-                    this.setState({
-                        twGallery: gallery
-                    });
-                    clearTimeout(timeout);
-                })
-                .catch(error => {
-                    console.error(error);
-                    this.setState({
-                        galleryError: error
-                    });
-                    clearTimeout(timeout);
-                });
-
-            
-            fetchPmLibrary()
-                .then(gallery => {
-                    cachedPmGallery = gallery;
-                    this.setState({
-                        pmGallery: gallery
-                    });
-                    clearTimeout(timeout);
-                })
-                .catch(error => {
-                    console.error(error);
-                    this.setState({
-                        galleryError: error
-                    });
-                    clearTimeout(timeout);
-                });
 
             fetchLibrary()
                 .then(gallery => {
@@ -271,10 +158,6 @@ class ExtensionLibrary extends React.PureComponent {
     render () {
         let library = [];
         const locale = this.props.intl.locale;
-
-        library = extensionLibraryContent.map(toLibraryItem);
-
-        library.push('---');
         
         const addedIds = new Set();
         if (this.state.gallery) {
@@ -289,38 +172,6 @@ class ExtensionLibrary extends React.PureComponent {
         } else if (this.state.galleryTimedOut && !this.state.gallery) {
             library.push(toLibraryItem(galleryLoading));
         } else if (this.state.galleryError && !this.state.gallery) {
-            library.push(toLibraryItem(galleryError));
-        }
-
-        library.push('---');
-
-        if (this.state.twGallery) {
-            const filteredTw = this.state.twGallery
-                .filter(item => !addedIds.has(item.extensionId))
-                .map(i => {
-                    addedIds.add(i.extensionId);
-                    return translateGalleryItem(i, locale);
-                });
-            library.push(...filteredTw.map(toLibraryItem));
-        } else if (this.state.galleryTimedOut && !this.state.twGallery) {
-            library.push(toLibraryItem(galleryLoading));
-        } else if (this.state.galleryError && !this.state.twGallery) {
-            library.push(toLibraryItem(galleryError));
-        }
-
-        library.push('---');
-
-        if (this.state.pmGallery) {
-            const filteredPm = this.state.pmGallery
-                .filter(item => !addedIds.has(item.extensionId))
-                .map(i => {
-                    addedIds.add(i.extensionId);
-                    return translateGalleryItem(i, locale);
-                });
-            library.push(...filteredPm.map(toLibraryItem));
-        } else if (this.state.galleryTimedOut && !this.state.pmGallery) {
-            library.push(toLibraryItem(galleryLoading));
-        } else if (this.state.galleryError && !this.state.pmGallery) {
             library.push(toLibraryItem(galleryError));
         }
 

@@ -1,9 +1,6 @@
 import {APP_NAME} from '../brand.js';
 
-// Because there are all brand names, it is unnecessary for them to be translatable.
+// TODO: Add tags
 export default [
-    {tag: 'scratch', intlLabel: 'Scratch'},
-    {tag: 'dash', intlLabel: APP_NAME},
-    {tag: 'tw', intlLabel: 'TurboWarp'},
-    {tag: 'pm', intlLabel: 'PenguinMod'}
+    // {tag: 'dash', intlLabel: APP_NAME},
 ];

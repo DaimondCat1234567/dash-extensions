@@ -3,9 +3,6 @@ import {FormattedMessage} from 'react-intl';
 
 import galleryIcon from './gallery/gallery.svg';
 import {APP_NAME} from '../brand';
-import { extensions } from '../extensions';
-
-export default extensions;
 
 export const galleryLoading = {
     name: (
