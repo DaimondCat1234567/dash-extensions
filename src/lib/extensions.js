@@ -6,9 +6,9 @@
 */
 const extensions = [
     {
-        name: "PlaygamaBridge SDK",
+        name: "Playgama Bridge SDK",
         id: "playgama",
-        description: "Playgama Bridge Software Develompent Kit (SDK) for Scratch.",
+        description: "Blocks that initialize and interact with the Playgama Bridge SDK. Official.",
         code: "https://github.com/Playgama/bridge-scratch/releases/download/v1.24.0-preview/PlaygamaBridge.js",
         banner: "Playgama/PlaygamaBridge.svg",
         creator: ['Playgama', 'sergei-playgama', 'DBDev-git'],
@@ -17,7 +17,7 @@ const extensions = [
     {
         name: "YaGames SDK",
         id: "yagames",
-        description: "Yandex Games Software Develompent Kit (SDK) for Scratch.",
+        description: "Blocks that initialize and interact with the Yandex Games SDK. Unofficial.",
         code: "timaaos/YaGames.js",
         banner: "timaaos/YaGames.svg",
         creator: ['timaaos', 'scratch-craft-2', 'DDen4ik-12', 'DBDev-git'],
@@ -26,7 +26,7 @@ const extensions = [
     {
         name: "Telegram Bot API",
         id: "TelegramBotAPI",
-        description: "Interact with Telegram API for Bots.",
+        description: "Blocks that interact with the Telegram API for bots. Unofficial.",
         code: "damir2809/TelegramBotAPI.js",
         banner: "damir2809/TelegramBotAPI.svg",
         creator: ["damir2809", "scratch_craft_2", "ttt999", "By-ROlil-CO", "AnonimKing24", "Den4ik-12"],
@@ -78,6 +78,7 @@ const pmExtensions = [
     },
     {
         name: "Boxed Physics",
+        id: "P7BoxPhys",
         description: "Implements the Box2D physics engine into PenguinMod, adding joints, springs, etc. This is different from TurboWarp's implementation.",
         code: "pooiod/Box2D.js",
         banner: "pooiod/B2Dimg.svg",
