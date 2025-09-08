@@ -29,7 +29,7 @@ const extensions = [
         description: "Interact with Telegram API for Bots.",
         code: "damir2809/TelegramBotAPI.js",
         banner: "damir2809/TelegramBotAPI.svg",
-        creator: ["damir2809", "scratch_craft_2", "ttt999", "By-ROlil-CO", "AnonimKing24"],
+        creator: ["damir2809", "scratch_craft_2", "ttt999", "By-ROlil-CO", "AnonimKing24", "Den4ik-12"],
         notes: "Translate to English soon.",
     },
     {

@@ -1,18 +1,15 @@
-// @name Telegram Bot API
-// @description Расширение которое позволяет взаимодействовать с Telegram API.
-// @thumbnail https://github.com/DBDev-git/TelegramBotAPI/blob/main/Thumbnail%20for%20Telegram%20Bot%20API%20extension%20by%20@AnonimKingNews.png?raw=true
-// @icon https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/768px-Telegram_2019_Logo.svg.png
-// @id TelegramBotAPI
-/* @authors
+// Name: Telegram Bot API
+// Description: Расширение которое позволяет взаимодействовать с Telegram API.
+// ID: TelegramBotAPI
+/* Creators
 @DBDev_IT in Scratch @damir2809,
 @Fedor_sushko in Scratch @scratch_craft_2,
 @Grisshink in Scratch @ttt999,
 @MEOW_MUR920 in Scratch @By-ROlil-CO,
 @FXCHK404,
 @AnonimKingNews in Scratch @AnonimKing24,
-...
+@d_den4ik_12 in Scratch @Den4ik-12
 */
-// @version 3.4.1
 
 (function (Scratch) {  
     'use strict';  
