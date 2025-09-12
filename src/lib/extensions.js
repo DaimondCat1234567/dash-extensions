@@ -49,6 +49,13 @@ const extensions = [
         creator: "Den4ik-12",
     },
     {
+        name: "MediaRecorder",
+        id: "MediaRecord",
+        description: "Record your projects directly in Dash!",
+        code: "scratch_craft_2/MediaRecorder.js",
+        creator: "scratch_craft_2",
+    },
+    {
         name: "Modals",
         id: "htmlalert",
         description: "Control classic modal windows in browsers!",
