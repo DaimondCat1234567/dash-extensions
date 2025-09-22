@@ -42,14 +42,11 @@ Add your extension in the `static/extensions` folder.
 
 Open [this link](https://github.com/DashBlocks/extensions/tree/main/static/extensions) in a new tab to open the folder.
 
-Click `Add File` at the top and click `Create new file`.
-
-GitHub will likely tell you to make a fork to do this step. Make sure to create one as you'll need to have the files somewhere.
-
-Create a new folder with your **Scratch** or **GitHub** username. You can do this by typing the username as the file name, and then typing a `/`. Then type the actual file name, followed by `.js`.
-
-Now, paste your extension's code into the file.
-You should now be able to `Commit changes` or `Create a pull request`, it'll likely be a green button.
++ Click `Add File` at the top and click `Create new file`.
++ GitHub will likely tell you to make a fork to do this step. Make sure to create one as you'll need to have the files somewhere.
++ Create a new folder with your **Scratch** or **GitHub** username. You can do this by typing the username as the file name, and then typing a `/`. Then type the actual file name, followed by `.js`.
++ Now, paste your extension's code into the file.
++ You should now be able to `Commit changes` or `Create a pull request`, it'll likely be a green button.
 
 ### Step 4.
 Update the extension ID.
