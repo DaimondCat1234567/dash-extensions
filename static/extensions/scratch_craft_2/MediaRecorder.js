@@ -90,7 +90,7 @@
             if (!this.recording) return;
 
             const that = this;
-            this.mediaRecorder.onstop = () => {
+            this.mediaRecorder.onstop = async () => {
                 const blob = new Blob(that.chunks, { type: 'video/mp4' });
                 that.chunks = [];
 
