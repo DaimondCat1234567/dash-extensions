@@ -2,59 +2,62 @@
 
 ## Submitting an extension
 
-### NOTE!
-Once submitted, your extension CANNOT be removed from the files. Your extension may be delisted, but the code must NEVER be removed.
+> [!IMPORTANT]
+> Once submitted, your extension **CANNOT** be removed from the files. Your extension may be delisted, but the code must **NEVER** be removed.
+>
+> This is to prevent projects being broken. If we remove your code, anyone who used your extension will have to remake their **ENTIRE** project without editing their file manually.
 
-This is to prevent projects being broken. If we remove your code, anyone who used your extension will have to remake their ENTIRE project without editing their file manually.
+> [!IMPORTANT]
+> **WE DON'T CURRENTLY ACCEPT YOUR EXTENSIONS**, as we plan to rewrite some parts of this instruction.
 
 ### Step 1.
 Create your extension. You can find a lot of details [here](https://docs.turbowarp.org/development/extensions/introduction).
 
 #### Important Guidelines:
 - Your extension should not already exist on the gallery. Please check the
-[Pull Requests](https://github.com/PenguinMod/PenguinMod-ExtensionsGallery/pulls)
-and [Gallery page](https://extensions.penguinmod.com/) to confirm.
+[Pull Requests](https://github.com/DashBlocks/extensions/pulls)
+and our extension gallery (within editor page of Dash) to confirm.
 - Your extension should be created for a specific purpose. An extension with random blocks someone might need will likely not get accepted if the blocks are not in a certain theme, like math or rendering.
-- Your extension should be easily explainable in 1-2 sentences or a single picture. This is what will determine whether you can be on the gallery or not.
-- Your extension should be MIT licensed (not compatible with the MIT license, should be the actual MIT license. This may change in the future.)
-- If your extension uses external content such as JS libraries or CSS stylesheets, you must include them inside the extension code itself. You **CANNOT** fetch/import content from URLs that is a core part of your extension as it'll make the extension unusable offline, or in offline packaged projects. This does not apply to content that obviously requires internet, like an extension that allows projects to use a public API.
+- If your extension uses external content such as JS libraries or CSS stylesheets, you must include them inside the extension code itself. You **CANNOT** fetch/import content from URLs that is a core part of your extension as it'll make the extension unusable offline, or in offline packaged projects. This does not apply to:
+    - content that obviously requires internet, like an extension that allows projects to use a public API.
+    - content of SDK-extensions, like "Yandex Games SDK (Unofficial)" extension.
 - Your extension **CANNOT** be made entirely with AI or assistive tools such as TurboBuilder. You must understand the raw code your extension is running.
-- Your extension **CANNOT** rely on the use of any generative AI. This is mainly for extensions that respond to messages from AI like ChatGPT. Any extensions added before this rule are an exception.
-- Your extension **CANNOT** reference or use any content from a website not suitable for ages 13+
-- Your extension **CANNOT** contain content not suitable for ages 10+ (including extension icon and extension code)
-- Your extension **CANNOT** contain discriminatory content or content that is against a certain group or minority
+- Your extension **CANNOT** rely on the use of any generative AI. This is mainly for extensions that respond to messages from AI like ChatGPT.
+- Your extension **CANNOT** reference, contain or use any content not suitable for ages under 16. (including extension icon and extension code)
+- Your extension **CANNOT** contain discriminatory content or content that is against a certain group or minority.
 
 ### Step 2.
-Create info for your extension, like a description and a banner / thumbnail.
-The banner / thumbnail is not required, but it will be a solid color if not provided.
+Create info for your extension, like a description and a banner/thumbnail.
+The banner/thumbnail is not required, but it will be a `static/images/unknown.svg` if not provided.
 
-Your banner / thumbnail must also be MIT licensed (basically just make it yourself and the image should be usable anywhere)
-
-Ideally, this banner / thumbnail should be 600x300 pixels. (may be resized if it does not fit this size or edited to fit this size)
+#### Important Guidelines:
+- Your banner/thumbnail **MUST BE** MIT licensed. (basically just make it yourself and the image should be usable anywhere)
+- Your banner/thumbnail **MUST BE** 600x300 pixels.
+- Your banner/thumbnail **CANNOT** reference or contain any content not suitable for ages under 16.
+- If your banner/thumbnail is in SVG format, it **CANNOT** contain `<text>` elements.
+- Ideally, your banner/thumbnail shound not contain any text, that needs to be translated, such as the name of extension.
 
 ### Step 3.
 Add your extension in the `static/extensions` folder.
 
-Open [this link](https://github.com/PenguinMod/PenguinMod-ExtensionsGallery/tree/main/static/extensions) in a new tab to open the folder.
+Open [this link](https://github.com/DashBlocks/extensions/tree/main/static/extensions) in a new tab to open the folder.
 
-Click `Add File` at the top and click `Create new file`.
-
-GitHub will likely tell you to make a fork to do this step. Make sure to create one as you'll need to have the files somewhere.
-
-Create a new folder with your **Scratch** or **GitHub** username. You can do this by typing the username as the file name, and then typing a `/`. Then type the actual file name, followed by `.js`.
-
-Now, paste your extension's code into the file.
-You should now be able to `Commit changes` or `Create a pull request`, it'll likely be a green button.
++ Click `Add File` at the top and click `Create new file`.
++ GitHub will likely tell you to make a fork to do this step. Make sure to create one as you'll need to have the files somewhere.
++ Create a new folder with your **Scratch** or **GitHub** username. You can do this by typing the username as the file name, and then typing a `/`. Then type the actual file name, followed by `.js`.
++ Now, paste your extension's code into the file.
++ You should now be able to `Commit changes` or `Create a pull request`, it'll likely be a green button.
 
 ### Step 4.
 Update the extension ID.
 
 To avoid conflicts or issues with other extensions, please put your name in the extension ID.
-Use only characters `a-z` lowercase and numbers to ensure that the ID is valid.
+Use only characters `a-z`, `A-Z` and numbers to ensure that the ID is valid.
 
 *Note: Some extensions may be accepted without this rule if they provide reason.*
 
 For example: `myExtension` could be `johnMyExtension` or `johnmyExtension`
+
 
 ### Step 5.
 Create the pull request.
@@ -69,6 +72,7 @@ Once your pull request is merged, it'll be on the site or upcoming onto the site
 
 *If it has a link to visit a preview, you can click on it and see your changes. See the Optional Steps for more info on how to edit the site to show your extension.*
 
+<!--
 # Optional Steps
 
 ### Step 6.
@@ -219,3 +223,4 @@ Each extension is incased in `{}` brackets. Look below on how to copy it.
     isGitHub: false, // Optional. false means this is your Scratch username, true means this is your GitHub username.
 },
 ```
+-->
