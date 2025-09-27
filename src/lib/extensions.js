@@ -11,7 +11,7 @@ const extensions = [
         description: "Blocks that initialize and interact with the Playgama Bridge SDK. Official.",
         code: "https://github.com/Playgama/bridge-scratch/releases/download/v1.25.0-preview/PlaygamaBridge.js",
         // banner: "Playgama/PlaygamaBridge.svg",
-        creator: ['Playgama', 'sergei-playgama', 'DBDev-git'],
+        creator: ['Playgama', 'sergei-playgama', 'DBDev-IT'],
         isGitHub: true,
     },
     {
@@ -20,7 +20,7 @@ const extensions = [
         description: "Blocks that initialize and interact with the Yandex Games SDK. Unofficial.",
         code: "timaaos/YaGames.js",
         banner: "timaaos/YaGames.svg",
-        creator: ['timaaos', 'scratch-craft-2', 'DDen4ik-12', 'DBDev-git'],
+        creator: ['timaaos', 'scratch-craft-2', 'DDen4ik-12', 'DBDev-IT'],
         isGitHub: true,
     },
     {
