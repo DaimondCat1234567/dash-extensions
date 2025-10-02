@@ -49,13 +49,6 @@ const extensions = [
         creator: "Den4ik-12",
     },
     {
-        name: "MediaRecorder",
-        id: "MediaRecord",
-        description: "Record your projects directly in Dash!",
-        code: "scratch_craft_2/MediaRecorder.js",
-        creator: "scratch_craft_2",
-    },
-    {
         name: "Modals",
         id: "htmlalert",
         description: "Control classic modal windows in browsers!",
@@ -64,11 +57,26 @@ const extensions = [
         creator: "scratch_craft_2",
     },
     {
+        name: "MediaRecorder",
+        id: "MediaRecord",
+        description: "Record your projects directly in Dash!",
+        code: "scratch_craft_2/MediaRecorder.js",
+        creator: "scratch_craft_2",
+    },
+    {
         name: "Notification",
         id: "notification",
         description: "Send notifications with icons.",
         code: "shilenin/Notification.js",
         banner: "shilenin/Notification.svg",
+        creator: "shilenin",
+    },
+    {
+        name: "Code Cleaner",
+        id: "ultimateBlockCleaner",
+        description: "Clean and optimize your code!",
+        code: "shilenin/CodeCleaner.js",
+        banner: "https://raw.githubusercontent.com/Mirazstudio-offical/Dash_code_cleaner_extension/refs/heads/main/logo.svg",
         creator: "shilenin",
     },
 ];
