@@ -10,12 +10,12 @@ class UltimateBlockCleaner {
                 {
                     opcode: 'removeHatlessBlocksOpcode',
                     blockType: Scratch.BlockType.BUTTON,
-                    text: 'delete orphaned scripts without a hat',
+                    text: 'Delete orphaned scripts without a hat',
                 },
                 {
                     opcode: 'removeEmptyHatsOpcode',
                     blockType: Scratch.BlockType.BUTTON,
-                    text: 'delete orphaned hats',
+                    text: 'Delete orphaned hats',
                 }
             ]
         };
