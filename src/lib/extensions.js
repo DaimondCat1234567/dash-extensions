@@ -79,6 +79,14 @@ const extensions = [
         banner: "https://raw.githubusercontent.com/Mirazstudio-offical/Dash_code_cleaner_extension/refs/heads/main/logo.svg",
         creator: "shilenin",
     },
+    {
+        name: "JavaScript",
+        id: "JavaScriptRunner",
+        description: "Run the JavaScript code directly in Dash!",
+        code: "shaman2016/JavaScriptRunner.js",
+        // banner: "",
+        creator: "SHAMAN2016",
+    },
 ];
 
 // This is PenguinMod's extensions. Added here for IDs addition
