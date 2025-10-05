@@ -21,7 +21,7 @@ and our extension gallery (within editor page of Dash) to confirm.
 - If your extension uses external content such as JS libraries or CSS stylesheets, you must include them inside the extension code itself. You **CANNOT** fetch/import content from URLs that is a core part of your extension as it'll make the extension unusable offline, or in offline packaged projects. This does not apply to:
     - content that obviously requires internet, like an extension that allows projects to use a public API.
     - content of SDK-extensions, like "Yandex Games SDK (Unofficial)" extension.
-- Your extension **CANNOT** be made entirely with AI or assistive tools such as TurboBuilder. You must understand the raw code your extension is running.
+- Your extension **CANNOT** be made entirely with AI and **CANNOT** be made **ENTIRELY OR PARTLY** with assistive tools such as TurboBuilder, ExtForge. You must understand the raw code your extension is running.
 - Your extension **CANNOT** rely on the use of any generative AI. This is mainly for extensions that respond to messages from AI like ChatGPT.
 - Your extension **CANNOT** reference, contain or use any content not suitable for ages under 16. (including extension icon and extension code)
 - Your extension **CANNOT** contain discriminatory content or content that is against a certain group or minority.
