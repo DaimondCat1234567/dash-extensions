@@ -18,6 +18,8 @@ Create your extension. You can find a lot of details [here](https://docs.turbowa
 [Pull Requests](https://github.com/DashBlocks/extensions/pulls)
 and our extension gallery (within editor page of Dash) to confirm.
 - Your extension should be created for a specific purpose. An extension with random blocks someone might need will likely not get accepted if the blocks are not in a certain theme, like math or rendering.
+- The primary purpose of your extension **CANNOT** be a monetization.
+- Your extension **CANNOT** use `eval()` or `new Function()`.
 - If your extension uses external content such as JS libraries or CSS stylesheets, you must include them inside the extension code itself. You **CANNOT** fetch/import content from URLs that is a core part of your extension as it'll make the extension unusable offline, or in offline packaged projects. This does not apply to:
     - content that obviously requires internet, like an extension that allows projects to use a public API.
     - content of SDK-extensions, like "Yandex Games SDK (Unofficial)" extension.
