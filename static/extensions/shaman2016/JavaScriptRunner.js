@@ -9,6 +9,8 @@
         return alert("This extension needs to be unsandboxed to run!");
     }
 
+    const Cast = Scratch.Cast;
+
     function output(out) {
         return out;
     }
@@ -22,10 +24,10 @@
                 "blocks": [
                     {
                         "opcode": "command",
-                        "text": "JS [CODE]",
+                        "text": "command [CODE]",
                         "blockType": Scratch.BlockType.COMMAND,
                         "arguments": {
-                            "code": {
+                            "CODE": {
                                 "type": Scratch.ArgumentType.STRING,
                                 "defaultValue": "alert(\"Hello World\")"
                             }
@@ -33,7 +35,7 @@
                     },
                     {
                         "opcode": "reporter",
-                        "text": "JS [CODE]",
+                        "text": "reporter [CODE]",
                         "blockType": Scratch.BlockType.REPORTER,
                         "arguments": {
                             "CODE": {
@@ -44,12 +46,34 @@
                     },
                     {
                         "opcode": "boolean",
-                        "text": "JS [CODE]",
+                        "text": "boolean [CODE]",
                         "blockType": Scratch.BlockType.BOOLEAN,
                         "arguments": {
                             "CODE": {
                                 "type": Scratch.ArgumentType.STRING,
-                                "defaultValue": "output(\"1 < 2\")"
+                                "defaultValue": "output(1 < 2)"
+                            }
+                        }
+                    },
+                    {
+                        "opcode": "array",
+                        "text": "array [CODE]",
+                        "blockType": Scratch.BlockType.ARRAY,
+                        "arguments": {
+                            "CODE": {
+                                "type": Scratch.ArgumentType.STRING,
+                                "defaultValue": "output([\"apple\", \"banana\"])"
+                            }
+                        }
+                    },
+                    {
+                        "opcode": "object",
+                        "text": "object [CODE]",
+                        "blockType": Scratch.BlockType.OBJECT,
+                        "arguments": {
+                            "CODE": {
+                                "type": Scratch.ArgumentType.STRING,
+                                "defaultValue": "output({\"apple\": \"banana\"})"
                             }
                         }
                     }
@@ -61,10 +85,20 @@
             eval(args.CODE);
         }
         reporter (args) {
-            return (eval(args.CODE));
+            const string = Cast.toString(eval(args.CODE));
+            return string;
         }
         boolean (args) {
-            return (eval(args.CODE));
+            const boolean = Cast.toBoolean(eval(args.CODE));
+            return boolean;
+        }
+        array (args) {
+            const array = Cast.toList(eval(args.CODE));
+            return array;
+        }
+        object (args) {
+            const object = Cast.toObject(eval(args.CODE));
+            return object;
         }
     }
 
