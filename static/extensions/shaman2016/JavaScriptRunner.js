@@ -24,7 +24,7 @@
                 "color1": "#0fbd8c",
                 "blocks": [
                     {
-                        "opcode": "handleChangeSandboxed",
+                        "func": "handleChangeSandboxed",
                         "text": sandboxed ? "Run unsandboxed" : "Run sandboxed",
                         "blockType": Scratch.BlockType.BUTTON
                     },
@@ -87,7 +87,7 @@
             }
         }
 
-        handleChangeSandbox () {
+        handleChangeSandboxed () {
             sandboxed = !sandboxed;
             Scratch.vm.extensionManager.refreshBlocks();
         }
