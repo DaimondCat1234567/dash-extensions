@@ -12,9 +12,9 @@
     const Cast = Scratch.Cast;
     let sandboxed = true;
 
-    function output(out) {
-        return out;
-    }
+    const functions = `
+        function output(out) {return out;}
+    `
 
     class JavaScriptExtension {
         getInfo() {
@@ -98,7 +98,7 @@
                     script.onerror = () => {
                         reject(new Error(`Error in unsandboxed script. Check console for more info`));
                     };
-                    script.src = `data:application/javascript,${encodeURIComponent(code)}`;
+                    script.src = `data:application/javascript,${encodeURIComponent(functions)};${encodeURIComponent(code)}`;
                     document.body.appendChild(script);
                     return;
                 }
@@ -106,7 +106,7 @@
                 script.onerror = () => {
                     reject(new Error(`Error in sandboxed script. Check the console for more info`));
                 };
-                script.src = `data:application/javascript,${encodeURIComponent(code)}`;
+                script.src = `data:application/javascript,${encodeURIComponent(functions)};${encodeURIComponent(code)}`;
                 document.body.appendChild(script);
             })
         }
