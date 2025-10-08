@@ -10,6 +10,7 @@
     }
 
     const Cast = Scratch.Cast;
+    let sandboxed = true;
 
     function output(out) {
         return out;
@@ -22,6 +23,11 @@
                 "name": "JavaScript",
                 "color1": "#0fbd8c",
                 "blocks": [
+                    {
+                        "opcode": "handleChangeSandboxed",
+                        "text": sandboxed ? "Run unsandboxed" : "Run sandboxed",
+                        "blockType": Scratch.BlockType.BUTTON
+                    },
                     {
                         "opcode": "command",
                         "text": "command [CODE]",
@@ -81,23 +87,47 @@
             }
         }
 
+        handleChangeSandbox () {
+            sandboxed = !sandboxed;
+            Scratch.vm.extensionManager.refreshBlocks();
+        }
+        _execute (code) {
+            new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                if (!sandboxed) {
+                    script.onerror = () => {
+                        reject(new Error(`Error in unsandboxed script. Check console for more info`));
+                    };
+                    script.src = `data:application/javascript,${encodeURIComponent(code)}`;
+                    document.body.appendChild(script);
+                    return;
+                }
+                script.onload = () => resolve();
+                script.onerror = () => {
+                    reject(new Error(`Error in sandboxed script. Check the console for more info`));
+                };
+                script.src = `data:application/javascript,${encodeURIComponent(code)}`;
+                document.body.appendChild(script);
+            })
+        }
+
         command (args) {
-            eval(args.CODE);
+            this._execute(args.CODE);
         }
         reporter (args) {
-            const string = Cast.toString(eval(args.CODE));
+            const string = Cast.toString(this._execute(args.CODE));
             return string;
         }
         boolean (args) {
-            const boolean = Cast.toBoolean(eval(args.CODE));
+            const boolean = Cast.toBoolean(this._execute(args.CODE));
             return boolean;
         }
         array (args) {
-            const array = Cast.toList(eval(args.CODE));
+            const array = Cast.toList(this._execute(args.CODE));
             return array;
         }
         object (args) {
-            const object = Cast.toObject(eval(args.CODE));
+            const object = Cast.toObject(this._execute(args.CODE));
             return object;
         }
     }
