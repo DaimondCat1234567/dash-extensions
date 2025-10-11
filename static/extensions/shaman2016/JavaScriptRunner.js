@@ -1,4 +1,4 @@
-// Name: JavaScript
+// Name: JavaScript Runner
 // ID: shaman2016JavaScriptRunner
 // Author: SHAMAN2016 <https://scratch.mit.edu/users/SHAMAN2016/>
 
@@ -13,14 +13,14 @@
     let sandboxed = true;
 
     const functions = `
-        function output(out) {return out;}
+        function output(out) {return out;}; function error(err) { output(`error: ${err}`) }
     `
 
     class JavaScriptExtension {
         getInfo() {
             return {
                 "id": "shaman2016JavaScriptRunner",
-                "name": "JavaScript",
+                "name": "JavaScript Runner",
                 "color1": "#0fbd8c",
                 "blocks": [
                     {
