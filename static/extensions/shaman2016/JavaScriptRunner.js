@@ -13,7 +13,7 @@
     let sandboxed = true;
 
     const functions = `
-        function output(out) {return out;}; function error(err) { output(`error: ${err}`) }
+        function output(out) {return out;}; function error(err) {output(`Error: ${err}`)}
     `
 
     class JavaScriptExtension {
@@ -39,7 +39,7 @@
                             }
                         }
                     },
-                    {
+                    /*{
                         "opcode": "reporter",
                         "text": "reporter [CODE]",
                         "blockType": Scratch.BlockType.REPORTER,
@@ -82,7 +82,7 @@
                                 "defaultValue": "output({\"apple\": \"banana\"})"
                             }
                         }
-                    }
+                    }*/
                 ]
             }
         }
