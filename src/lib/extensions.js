@@ -49,6 +49,14 @@ const extensions = [
         creator: "Den4ik-12",
     },
     {
+        name: "Maps",
+        id: "Den4ik12Maps",
+        description: "Blocks for working with Map, which is more powerful than Object.",
+        code: "Den4ik-12/Maps.js",
+        banner: "Den4ik-12/Maps.svg",
+        creator: "Den4ik-12",
+    },
+    {
         name: "Modals",
         id: "htmlalert",
         description: "Control classic modal windows in browsers!",
