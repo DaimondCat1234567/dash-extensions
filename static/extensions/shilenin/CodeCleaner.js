@@ -8,12 +8,12 @@ class UltimateBlockCleaner {
             color2: '#A0522D',
             blocks: [
                 {
-                    opcode: 'removeHatlessBlocksOpcode',
+                    func: 'removeHatlessBlocks',
                     blockType: Scratch.BlockType.BUTTON,
                     text: 'Delete orphaned scripts without a hat',
                 },
                 {
-                    opcode: 'removeEmptyHatsOpcode',
+                    func: 'removeEmptyHats',
                     blockType: Scratch.BlockType.BUTTON,
                     text: 'Delete orphaned hats',
                 }
@@ -21,7 +21,7 @@ class UltimateBlockCleaner {
         };
     }
 
-    removeHatlessBlocksOpcode() {
+    removeHatlessBlocks() {
         if (!confirm('Are you sure that you want to delete orphaned scripts without a hat? This CANNOT be undone')) {
             return;
         }
@@ -55,7 +55,7 @@ class UltimateBlockCleaner {
         alert(`Done! Deleted orphaned scripts without a hat: ${totalRemovedCount}`);
     }
 
-    removeEmptyHatsOpcode() {
+    removeEmptyHats() {
         if (!confirm('Are you sure that you want to delete ALL orphaned hats? This CANNOT be undone')) {
             return;
         }
