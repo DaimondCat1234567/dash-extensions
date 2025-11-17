@@ -6,6 +6,8 @@
 (function(Scratch) {
     'use strict';
 
+    if (!Scratch.extensions.unsandboxed) throw new Error('Discord Webhook API must run unsandboxed!');
+
     class DiscordWebhookAPIExtension {
         constructor () {
             this.webhook = null;
