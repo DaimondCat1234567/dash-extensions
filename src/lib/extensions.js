@@ -33,6 +33,15 @@ const extensions = [
         notes: "Translate to English soon.",
     },
     {
+        name: "Discord Webhook API",
+        id: "DBDevDiscordWebhookAPI",
+        description: "Blocks that interact with the Discord Webhook API. Unofficial.",
+        code: "damir2809/DiscordWebhookAPI.js",
+        // banner: "damir2809/DiscordWebhookAPI.svg",
+        creator: "damir2809",
+        notes: "Beta-version.",
+    },
+    {
         name: "Pathfinding",
         id: "Den4ik12Pathfinding",
         description: "Find paths from one position to another, avoiding obstacles.",
