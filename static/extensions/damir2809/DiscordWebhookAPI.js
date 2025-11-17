@@ -8,6 +8,8 @@
 
     if (!Scratch.extensions.unsandboxed) throw new Error('Discord Webhook API must run unsandboxed!');
 
+    const Cast = Scratch.Cast;
+
     class DiscordWebhookAPIExtension {
         constructor () {
             this.webhook = null;
