@@ -90,7 +90,7 @@
         }
 
         async init (args) {
-            if (this.connected) return;
+            if (this.connected && this.webhook === args.WEBHOOK_URL) return;
             this.webhook = args.WEBHOOK_URL;
             const response = await this._makeRequest();
             if (response.ok) this.connected = true;
