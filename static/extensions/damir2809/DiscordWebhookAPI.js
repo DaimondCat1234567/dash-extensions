@@ -93,7 +93,7 @@
             if (this.connected && this.webhook === args.WEBHOOK_URL) return;
             this.webhook = args.WEBHOOK_URL;
             const response = await this._makeRequest();
-            if (response.ok) this.connected = true;
+            response.ok ? this.connected = true : this.connected = false;
         }
 
         async _makeRequest (method = 'GET', body = null) {
