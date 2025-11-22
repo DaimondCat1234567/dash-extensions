@@ -53,7 +53,7 @@ const extensions = [
         name: "Wheel Scroll",
         id: "Den4ik12WheelScroll",
         description: "Blocks for detecting mouse wheel scrolling.",
-        code: "Den4ik-12/WheelScroll 1.2.js",
+        code: "Den4ik-12/WheelScroll.js",
         banner: "Den4ik-12/WheelScroll.svg",
         creator: "Den4ik-12",
     },
